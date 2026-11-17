@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-default">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <canvas id="fx"></canvas>
+
+  <main class="card">
+    <header>
+      <h1>Weather<span>Finder</span></h1>
+      <p>Live weather for any city</p>
+    </header>
+
+    <form id="searchForm">
+      <input type="text" id="cityInput" placeholder="Search city..." autocomplete="off">
+      <button type="button" id="locBtn" class="loc" title="Use my location" aria-label="Use my location">📍</button>
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="bar">
+      <div id="chips" class="chips"></div>
+      <div class="unit-toggle">
+        <button type="button" class="unit active" data-unit="C">°C</button>
+        <button type="button" class="unit" data-unit="F">°F</button>
+      </div>
+    </div>
+
+    <p id="status" class="status"></p>
+    <div id="matches" class="chips matches"></div>
+    <section id="result" class="hidden"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
